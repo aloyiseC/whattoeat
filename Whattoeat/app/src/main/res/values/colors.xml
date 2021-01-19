@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#308ee3</color>
+	<color name="colorPrimaryDark">#308ee3</color>
+	<color name="colorAccent">#03DAC5</color>
+	<color name="white">#ffffff</color>
+	<color name="black">#000000</color>
+
+	<!-- 透明度转换 16进制
+100% — FF 95% — F2 90% — E6 85% — D9 80% — CC 75% — BF 70% — B3 65% — A6
+ 60% — 99 55% — 8C 50% — 80 45% — 73 40% — 66 35% — 59 30% — 4D 25% — 40 20% — 33 15% — 26
+ 10% — 1A 5% — 0D 0% — 00-->
+	<color name="color_308ee3_40">#66308ee3</color>
+	<color name="transparent">#00000000</color>
+	<color name="color_f44336_80">#ccf44336</color>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cook_type_array">
+        <item>荤菜</item>
+        <item>素菜</item>
+        <item>主食</item>
+        <item>汤</item>
+    </string-array>
+    <string-array name="week_day">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期天</item>
+    </string-array>
+</resources>

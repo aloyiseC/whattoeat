@@ -1,0 +1,11 @@
+package com.internetbrands.whattoeat.di.module
+
+import dagger.Module
+
+/**
+Created by Wei Lai 2020/5/12
+Description:
+ */
+@Module
+class CookMenuModule {
+}

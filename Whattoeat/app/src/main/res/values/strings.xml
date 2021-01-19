@@ -1,0 +1,11 @@
+<resources>
+	<string name="app_name">每天吃啥</string>
+	<string name="menu_week">每周菜单总览</string>
+	<string name="menu_cook">菜谱总览</string>
+	<string name="add">添加</string>
+	<string name="del">删除</string>
+	<string name="submit">提交</string>
+	<string name="check">查看</string>
+	<string name="cookcount_str">您一共烹制了%1$d次</string>
+	<string name="cookcount_zero_str">您还没有烹制过</string>
+</resources>

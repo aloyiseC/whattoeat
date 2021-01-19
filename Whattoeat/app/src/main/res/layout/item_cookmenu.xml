@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="44dp"
+        android:id="@+id/nameTv"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="44dp"
+        android:id="@+id/typeTv"
+        android:layout_marginLeft="12dp"
+        android:gravity="center"/>
+    <!--<TextView
+        android:layout_width="60dp"
+        android:layout_height="44dp"
+        android:id="@+id/countTv"
+        android:layout_marginLeft="12dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="44dp"
+        android:id="@+id/lastCookTv"
+        android:layout_marginLeft="12dp"
+        android:gravity="center"/>-->
+    <Button
+        android:layout_width="44dp"
+        android:layout_height="30dp"
+        android:id="@+id/submitBtn"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/white"
+        android:background="@drawable/add_player_btn_bg"/>
+</LinearLayout>
