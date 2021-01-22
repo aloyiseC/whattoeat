@@ -16,8 +16,8 @@ interface MenuDao {
     @Update
     fun update(dayMenu: DayMenu)
 
-    @Query("select * from daymenu where date >= :mondayInt and date <= :sundayInt")
-    suspend fun getWeekMenu(mondayInt:Int,sundayInt:Int):List<DayMenu>
+    @Query("select * from daymenu")
+    suspend fun getDayMenuList():List<DayMenu>
 
     @Insert
     suspend fun insert(list:List<DayCook>)

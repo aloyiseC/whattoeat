@@ -17,9 +17,9 @@ class MenuRepository @Inject constructor(var dao: MenuDao) : BaseRepository() {
 
     fun updateDayMenu(dayMenu: DayMenu) = dao.update(dayMenu)
 
-    fun getWeekMenu(monday: Int, sunday: Int, listener: ResponseListener<DayMenu>): Job =
+    fun getDayMenuList(listener: ResponseListener<DayMenu>): Job =
         execute(
-            call = { dao.getWeekMenu(monday, sunday) },
+            call = { dao.getDayMenuList() },
             callback = { listener.onGetList(it) }
         )
 

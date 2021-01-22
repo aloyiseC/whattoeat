@@ -34,9 +34,6 @@ class WeekMenuFragment : BaseFragment() {
     lateinit var viewModel:WeekMenuViewModel
     lateinit var recyclerView: androidx.recyclerview.widget.RecyclerView
     lateinit var adapter: WeekMenuAdapter
-    private var todayMenu: DayMenu ?= null
-    var week = Week.getThisWeek()
-
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
@@ -54,32 +51,25 @@ class WeekMenuFragment : BaseFragment() {
         viewModel.menu().observe(this, Observer {
             refresh(it)
         })
-        viewModel.dayMenu().observe(this, Observer {
-            todayMenu = it
-        })
-        viewModel.error().observe(this, Observer {
-            showToast("今天的菜单还没添加")
-        })
         loadData()
     }
 
     private fun init() {
         recyclerView = root.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
-        adapter = WeekMenuAdapter(context!!,week)
+        adapter = WeekMenuAdapter(context!!)
         adapter.onDayMenuClickListener = object : OnDayMenuClickListener {
             override fun onClick(dayMenu: DayMenu?) {
                 if(dayMenu != null){
-                    newIntent<AddMenuActivity>(dayMenu)
+
                 }
             }
         }
         recyclerView.adapter = adapter
     }
 
-    fun loadData(){
-        viewModel.getMenuList(week)
-        viewModel.getDayMenu(week.today)
+    private fun loadData(){
+        viewModel.getMenuList()
     }
 
     private fun refresh(list:List<DayMenu>){
@@ -88,7 +78,7 @@ class WeekMenuFragment : BaseFragment() {
     }
 
     fun toAddMenu(){
-        newIntentForResult<AddMenuActivity>(REQUEST_CODE_ADD_MENU,week.today)
+        newIntentForResult<AddMenuActivity>(REQUEST_CODE_ADD_MENU)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

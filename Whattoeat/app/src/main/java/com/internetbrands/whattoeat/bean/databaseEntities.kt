@@ -42,10 +42,10 @@ class Cook :Serializable{
 class DayMenu :Serializable{
     @PrimaryKey(autoGenerate = true)
     var dmenuId: Int = 0
-    var date: Date? = null;
+    var date: Int = 0;
     var cookNames: String? = null
 
-    constructor(date: Date?, cookNames: String?) {
+    constructor(date: Int, cookNames: String?) {
         this.date = date
         this.cookNames = cookNames
     }
@@ -57,14 +57,11 @@ class DayCook {
     var dcookId: Int = 0
     var cookId: Int = 0
     var dmenuId: Int = 0
-    var date:Date? = null
+    var date:Int = 0
 
-    constructor(cookId: Int, dmenuId: Int, date: Date) {
+    constructor(cookId: Int, dmenuId: Int, date: Int) {
         this.cookId = cookId
         this.dmenuId = dmenuId
         this.date = date
     }
-}
-class DateConverter{
-
 }
